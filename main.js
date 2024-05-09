@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 // const cors = require('cors');
 const mongoose = require('mongoose')
+require('dotenv').config();
+
 
 app.use(express.json());
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://ndjedjos:test@cluster0.mubsi4p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGODB_URI;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 
 // run().catch(console.dir);
@@ -38,7 +40,7 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3000;
 // const environment = process.env.ENVIRONMENT
 // const client_id = process.env.CLIENT_ID
 // const client_secret = process.env.CLIENT_SECRET;

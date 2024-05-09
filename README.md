@@ -8,5 +8,7 @@ Then, I tried to implement a PayPal functionality, but I ran out of time (you ca
 
 The primary code files I wrote are main.js in my backend and TextInput in src/components/home/ . the rest of the code I used online tutorials and google firebase documentation to help me deploy.
 
+My post to /home is my main route, but I used / and Get to test my initial routing using postman. I struggled a lot with MongoDB setup because I didn't realize I needed to define client locally as I tried to define it globally and it wouldn't authenticate properly. I used a dotenv file to save valuable API keys too.
+
 
 

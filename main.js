@@ -33,7 +33,7 @@ async function run() {
 run().catch(console.dir);
 
 app.use(express.urlencoded({extended: true}))
-app.use(cors());
+// app.use(cors());
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
